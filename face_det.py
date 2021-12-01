@@ -11,9 +11,9 @@ video_capture = cv2.VideoCapture(0)  # loading first webcam available index 0
 while True:
     # Capturing each frame
     ret, frames = video_capture.read()
-    gray = cv2.cvtColor(frames, cv2.COLOR_BGR2GRAY)
+    grey = cv2.cvtColor(frames, cv2.COLOR_BGR2GRAY)
     faces = faceCascade.detectMultiScale(
-        gray,
+        grey,
         scaleFactor=1.1,
         minNeighbors=5,
         minSize=(30, 30),
