@@ -23,7 +23,7 @@ while True:
     for x1, y1, x2, y2 in faces:  # bottom, left, top, right
         cv2.putText(frames, 'Face Detected', (
             x1, y1 - 10), cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255))
-        # draw rectangle around location of face
+
         cv2.rectangle(frames, (x1, y1), (x1 + x2, y1 + y2), (255, 255, 255), 1)
 
     # Display the resulting frame
