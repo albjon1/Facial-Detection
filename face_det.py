@@ -11,7 +11,7 @@ video_capture = cv2.VideoCapture(0)  # loading first webcam available index 0
 while True:
     # Capturing each frame
     ret, frames = video_capture.read()
-    grey = cv2.cvtColor(frames, cv2.COLOR_BGR2GRAY)
+    grey = cv2.cvtColor(frames, cv2.COLOR_BGR2GRAY) # converting to greyscale
     faces = faceCascade.detectMultiScale(
         grey,
         scaleFactor=1.1,
@@ -23,7 +23,7 @@ while True:
     for x1, y1, x2, y2 in faces:  # bottom, left, top, right
         cv2.putText(frames, 'Face Detected', (
             x1, y1 - 10), cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255))
-
+        # draw rectangle around location of face
         cv2.rectangle(frames, (x1, y1), (x1 + x2, y1 + y2), (255, 255, 255), 1)
 
     # Display the resulting frame
