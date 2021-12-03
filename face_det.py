@@ -29,7 +29,7 @@ while True:
     # display the resulting frame
     cv2.imshow('Face Detection Application', frames)
 
-    # exit loop if key equal to ascii 113 ('q')
+    # exit loop if key input equal to ascii 113 ('q')
     key = cv2.waitKey(1)
     if key == 113:
         break
