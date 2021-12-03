@@ -14,7 +14,7 @@ while True:
     grey = cv2.cvtColor(frames, cv2.COLOR_BGR2GRAY) # converting to greyscale
     faces = faceCascade.detectMultiScale(
         grey,
-        scaleFactor=1.2,
+        scaleFactor=1.1,
         minNeighbors=5,
         minSize=(30, 30),
         flags=cv2.CASCADE_SCALE_IMAGE
