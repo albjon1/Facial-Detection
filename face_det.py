@@ -9,7 +9,7 @@ faceCascade = cv2.CascadeClassifier(cascPath)  # setting as the classifier
 
 video_capture = cv2.VideoCapture(0)  # loading first webcam available index 0
 while True:
-    # Capturing each frame
+    # capturing each frame
     ret, frames = video_capture.read()
     grey = cv2.cvtColor(frames, cv2.COLOR_BGR2GRAY) # converting to greyscale
     faces = faceCascade.detectMultiScale(
@@ -26,7 +26,7 @@ while True:
 
         cv2.rectangle(frames, (x1, y1), (x1 + x2, y1 + y2), (255, 255, 255), 1)
 
-    # Display the resulting frame
+    # display the resulting frame
     cv2.imshow('Face Detection Application', frames)
 
     # exit loop if key equal to ascii 113 ('q')
