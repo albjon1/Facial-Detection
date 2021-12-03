@@ -5,7 +5,7 @@ import os
 cascPath = os.path.dirname(
           cv2.__file__) + "/data/haarcascade_frontalface_default.xml"
 
-faceCascade = cv2.CascadeClassifier(cascPath)
+faceCascade = cv2.CascadeClassifier(cascPath # setting as the classifier
 
 video_capture = cv2.VideoCapture(0)  # loading first webcam available index 0
 while True:
