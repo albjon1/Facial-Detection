@@ -19,6 +19,7 @@ while True:
         minSize=(30, 30),
         flags=cv2.CASCADE_SCALE_IMAGE
     )
+    print(faces)
 
     # rectangle and text around detected face
     for x1, y1, x2, y2 in faces:             # x-axis, y-axis, width, height
