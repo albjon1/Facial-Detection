@@ -12,7 +12,7 @@ while True:
     # capturing each frame
     ret, frames = webcam.read()
     grey = cv2.cvtColor(frames, cv2.COLOR_BGR2GRAY)  # converting to greyscale
-    faces = faceCascade.detectMultiScale(            # detects multiple faces
+    faces = faceCascade.detectMultiScale(
         grey,
         scaleFactor=1.1,
         minNeighbors=5,
