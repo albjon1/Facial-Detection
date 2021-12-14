@@ -7,7 +7,7 @@ cascPath = os.path.dirname(
 
 faceCascade = cv2.CascadeClassifier(cascPath)  # setting as the classifier
 
-webcam = cv2.VideoCapture(0)  # loading first webcam available index 0
+webcam = cv2.VideoCapture(0)  # loading first webcam available index [0]
 while True:
     # capturing each frame
     ret, frames = webcam.read()
