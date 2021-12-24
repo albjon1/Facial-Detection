@@ -3,7 +3,7 @@ import os
 
 # locating haarcascade in opencv /data folder
 cascPath = os.path.dirname(
-          cv2.__file__) + "/data/haarcascade_frontalface_default.xml"
+          cv2.__file__) + '/data/haarcascade_frontalface_default.xml'
 
 faceCascade = cv2.CascadeClassifier(cascPath)  # setting as the classifier
 
