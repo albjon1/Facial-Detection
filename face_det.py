@@ -2,17 +2,17 @@ import cv2
 import os
 
 # locating haarcascade in opencv /data folder
-cascPath = os.path.dirname(
+casc_path = os.path.dirname(
           cv2.__file__) + '/data/haarcascade_frontalface_default.xml'
 
-faceCascade = cv2.CascadeClassifier(cascPath)  # setting as the classifier
+face_cascade = cv2.CascadeClassifier(casc_path)  # setting as the classifier
 
-webcam = cv2.VideoCapture(0)  # loading first webcam available index [0]
+webcam = cv2.VideoCapture(0)  # loading first webcam available index 0
 while True:
     # capturing each frame
     ret, frames = webcam.read()
     grey = cv2.cvtColor(frames, cv2.COLOR_BGR2GRAY)  # converting to greyscale
-    faces = faceCascade.detectMultiScale(
+    faces = face_cascade.detectMultiScale(
         grey,
         scaleFactor=1.1,
         minNeighbors=5,
