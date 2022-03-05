@@ -1,5 +1,6 @@
 import cv2
 import os
+import ctypes
 
 # locating haarcascade in opencv /data folder
 casc_path = os.path.dirname(
@@ -45,7 +46,8 @@ try:
         if key == 113:
             break
 except Exception:
-    print('Error: First available webcam already in use')
+    ctypes.windll.user32.MessageBoxW(
+        0, "First available webcam already in use", "Error Raised", 1)
 
 webcam.release()
 cv2.destroyAllWindows()
