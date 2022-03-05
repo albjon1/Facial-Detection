@@ -20,7 +20,7 @@ try:
             minNeighbors=5,
             minSize=(30, 30),
             flags=cv2.CASCADE_SCALE_IMAGE)
-        print(faces)  # location of face(s) in arrays
+        print(f'Face locations: {faces}')  # location of face(s) in arrays
 
         # rectangle and text around detected face
         for x1, y1, x2, y2 in faces:             # x-axis, y-axis, width, height
