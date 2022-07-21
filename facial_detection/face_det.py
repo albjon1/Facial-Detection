@@ -47,7 +47,7 @@ try:
             break
 except Exception:
     ctypes.windll.user32.MessageBoxW(
-        0, "First available webcam already in use", "Error Raised", 0)
+        0, 'An error occured, try restarting', 'Error Raised', 0)
 
 webcam.release()
 cv2.destroyAllWindows()
