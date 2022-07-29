@@ -1,2 +1,2 @@
 # Facial detection using OpenCV
-Install required modules -> pip install -r requirements.txt
+pip install -r requirements.txt
